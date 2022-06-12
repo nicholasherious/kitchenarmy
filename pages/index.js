@@ -18,9 +18,14 @@ export default function Home() {
 
   const calculateTime = e => {
     e.preventDefault();
-    const startTime = moment(start, 'HH:mm:ss a');
+    var startTime = moment(start, 'HH:mm:ss a');
     const morningCutoff = moment('16:00:00', 'HH:mm:ss a');
-    const endTime = moment(end, 'HH:mm:ss a');
+    var endTime = moment(end, 'HH:mm:ss a');
+
+    if (endTime.isBefore(startTime)) {
+      endTime.add(1, 'd');
+    }
+
     const duration = moment
       .duration(endTime.diff(startTime))
       .asHours()
