@@ -121,7 +121,7 @@ export default function Home() {
               required
             />
           </div>
-          <div className='flex items-start mb-6'></div>
+          <div className='flex items-start mb-6'>
           <button
             type='submit'
             onClick={calculateTime}
@@ -136,6 +136,7 @@ export default function Home() {
           >
             Clear
           </button>
+          </div>
         </form>
       </main>
       <div className='flex justify-center mt-10'>
