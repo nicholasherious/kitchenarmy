@@ -139,15 +139,25 @@ export default function Home() {
         </form>
       </main>
       <div className='flex justify-center mt-10'>
-        <div>
+        <div className='p-2  bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'>
           {showCalculated && (
-            <div>
-              Total Hours: {totalHours} / Total Mins: {totalMins} / Morning
-              Hours: {morningHours} / Evening Hours: {eveningHours}
+            <div className=''>
+              <ul>
+                <li>Total Hours: {totalHours}</li>
+                <li>Total Mins: {totalMins}</li>
+                <li>Morning Hours: {morningHours}</li>
+                <li>Evening Hours: {eveningHours}</li>
+                <li>
+                  Still testing, more things will be added.
+                </li>
+              </ul>
+             
             </div>
           )}
         </div>
+       
       </div>
+      
     </div>
   );
 }
